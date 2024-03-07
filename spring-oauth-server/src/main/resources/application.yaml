@@ -1,0 +1,27 @@
+server:
+  port: 8080
+spring:
+  output.ansi.enabled: ALWAYS
+  security:
+    oauth2:
+      authorizationserver:
+        client:
+          demo-client:
+            require-authorization-consent: true
+            registration:
+              client-id: demo
+              client-secret: "{noop}secret"
+              authorization-grant-types: client_credentials,authorization_code,refresh_token
+              redirect-uris: http://127.0.0.1:8082/login/oauth2/code/reg-client
+              scopes: user.read,user.write,openid
+              client-authentication-methods: client_secret_basic
+
+  datasource:
+    #    initialization-mode: always
+    url: jdbc:mysql://localhost:3306/micro
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 122334Asd
+  jpa:
+    hibernate:
+      ddl-auto: validate
