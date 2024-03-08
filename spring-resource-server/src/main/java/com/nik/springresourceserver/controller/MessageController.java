@@ -10,5 +10,7 @@ public class MessageController {
     public String getMessage () {
         return "hello from controller";
     }
+//http://127.0.0.1:8765/RESOURCE-SERVER/hello
+
 
 }

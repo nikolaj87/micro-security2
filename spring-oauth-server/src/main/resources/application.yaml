@@ -15,13 +15,11 @@ spring:
               redirect-uris: http://127.0.0.1:8082/login/oauth2/code/reg-client
               scopes: user.read,user.write,openid
               client-authentication-methods: client_secret_basic
-
-  datasource:
-    #    initialization-mode: always
-    url: jdbc:mysql://localhost:3306/micro
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: 122334Asd
-  jpa:
-    hibernate:
-      ddl-auto: validate
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/micro
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password: 122334Asd
+#  jpa:
+#    hibernate:
+#      ddl-auto: validate

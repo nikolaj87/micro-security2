@@ -1,5 +1,5 @@
 server:
-  port: 8100
+  port: 8182
 spring:
   security:
     oauth2:
@@ -7,7 +7,7 @@ spring:
         jwt:
           issuer-uri: http://localhost:8080
   application:
-    name: resource-server
+    name: resource-server2
 eureka:
   client:
     serviceUrl:
