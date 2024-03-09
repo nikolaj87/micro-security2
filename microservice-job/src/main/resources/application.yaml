@@ -7,7 +7,7 @@ spring:
         jwt:
           issuer-uri: http://localhost:8080
   application:
-    name: resource-server
+    name: microservice-job
 eureka:
   client:
     serviceUrl:

@@ -1,4 +1,4 @@
-package com.nik.springresourceserver.config;
+package com.nik.jobmicroservice.config;
 
 
 import org.springframework.context.annotation.Bean;

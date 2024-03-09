@@ -1,13 +1,13 @@
-package com.nik.springresourceserver;
+package com.nik.jobmicroservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringResourceServerApplication {
+public class JobMicroservice {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringResourceServerApplication.class, args);
+		SpringApplication.run(JobMicroservice.class, args);
 	}
 
 }

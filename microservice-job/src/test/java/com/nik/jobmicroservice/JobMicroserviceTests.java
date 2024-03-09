@@ -1,10 +1,10 @@
-package com.nik.springresourceserver;
+package com.nik.jobmicroservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringResourceServerApplicationTests {
+class JobMicroserviceTests {
 
 	@Test
 	void contextLoads() {
