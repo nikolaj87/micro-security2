@@ -1,13 +1,13 @@
-package com.nik.resouce2;
+package com.nik.microservicestudent;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Resouce2Application {
+public class MicroserviceStudentApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Resouce2Application.class, args);
+		SpringApplication.run(MicroserviceStudentApplication.class, args);
 	}
 
 }

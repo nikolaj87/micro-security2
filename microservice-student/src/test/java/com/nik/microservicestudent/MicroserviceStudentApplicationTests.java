@@ -1,10 +1,10 @@
-package com.nik.resouce2;
+package com.nik.microservicestudent;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Resouce2ApplicationTests {
+class MicroserviceStudentApplicationTests {
 
 	@Test
 	void contextLoads() {
