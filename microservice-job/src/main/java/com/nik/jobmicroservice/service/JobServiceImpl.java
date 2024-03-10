@@ -24,10 +24,10 @@ public class JobServiceImpl implements JobService {
 
     @Override
     public JobResponse assignStudent(String token) {
-        Job job = repository.findById(1L).get();
-        StudentDto studentDto = studentProxy.getStudent();
+        Job job = repository.getRandomJob();
+        StudentDto studentDto = studentProxy.getStudent(token);
         return new JobResponse(job.getName(), job.getPositionDescription(),
-                studentDto.getName(),studentDto.getMark(), "123");
+                studentDto.getName(),studentDto.getMark(), studentDto.getPort());
     }
 
     @Override

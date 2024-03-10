@@ -1,4 +1,4 @@
-package com.nik.jobmicroservice.dto;
+package com.nik.microservicestudent.dto;
 
 import lombok.*;
 
@@ -8,9 +8,10 @@ import lombok.*;
 @Setter
 @ToString
 @EqualsAndHashCode
-public class StudentDto {
+public class StudentResponse {
     private Long id;
     private String name;
     private Double mark;
     private String port;
 }
+

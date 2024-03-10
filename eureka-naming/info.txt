@@ -1,0 +1,23 @@
+eureka                           8761
+microservice-job                 8100           -job
+microservice-student             8200 8201 ...  -student
+api-gateway                      8765
+authorization-server             8080
+
+api  STUDENT-microservice
+
+1    /student/       - get
+2    /student/{id}   - get(id)
+3    /student        - post
+4    /student/{id}   - delete(id)
+
+api  JOB-microservice
+
+1    /job/       - get
+2    /job/{id}   - get(id)
+3    /job        - post
+4    /job/{id}   - delete(id)
+5    /assign-job-for-student  - этот апи демонстрирует взаимодействие микросервисов
+                                запрашиваю стедента и назначаю его на работу
+                                также демонстрирует работу LoadBalancer
+                                http://127.0.0.1:8765/MICROSERVICE-JOB/job/assign-job-for-student

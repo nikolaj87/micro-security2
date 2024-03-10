@@ -1,6 +1,7 @@
 package com.nik.microservicestudent.service;
 
 import com.nik.microservicestudent.dto.StudentJson;
+import com.nik.microservicestudent.dto.StudentResponse;
 import com.nik.microservicestudent.entity.Student;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,4 +16,6 @@ public interface StudentService {
     Student createStudent(StudentJson studentJson);
     @Transactional
     void deleteStudent(Long id);
+    @Transactional
+    StudentResponse getBestStudent();
 }

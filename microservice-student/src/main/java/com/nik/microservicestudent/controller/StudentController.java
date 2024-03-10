@@ -1,9 +1,11 @@
 package com.nik.microservicestudent.controller;
 
 import com.nik.microservicestudent.dto.StudentJson;
+import com.nik.microservicestudent.dto.StudentResponse;
 import com.nik.microservicestudent.entity.Student;
 import com.nik.microservicestudent.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +17,14 @@ public class StudentController {
 
     @Autowired
     private StudentService studentService;
+
+    @Autowired
+    private ServerProperties properties;
+
+    @GetMapping("/best-student")
+    public StudentResponse getBestStudent() {
+        return studentService.getBestStudent();
+    }
 
 
 

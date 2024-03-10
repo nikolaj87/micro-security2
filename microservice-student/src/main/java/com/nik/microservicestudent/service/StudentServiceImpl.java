@@ -1,9 +1,11 @@
 package com.nik.microservicestudent.service;
 
 import com.nik.microservicestudent.dto.StudentJson;
+import com.nik.microservicestudent.dto.StudentResponse;
 import com.nik.microservicestudent.entity.Student;
 import com.nik.microservicestudent.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,6 +17,16 @@ public class StudentServiceImpl implements StudentService{
 
     @Autowired
     private StudentRepository repository;
+
+    @Autowired
+    private ServerProperties properties;
+
+    @Override
+    public StudentResponse getBestStudent() {
+        Student bestStudent = repository.getBestStudent();
+        return new StudentResponse(bestStudent.getId(), bestStudent.getName(),
+                bestStudent.getMark(), properties.getPort().toString());
+    }
 
     @Override
     public Student getStudent(Long id) {
