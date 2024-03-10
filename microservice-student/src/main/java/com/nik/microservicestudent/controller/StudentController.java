@@ -16,6 +16,8 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+
+
     @GetMapping("/{id}")
     public Student getStudent(@PathVariable Long id) {
         return studentService.getStudent(id);
